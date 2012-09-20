@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handler.ExecuteGroovyScriptHandler"
+            commandId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand"
+            name="Execute Groovy Script">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:net.openchrom.chromatogram.msd.ui.perspective.chromatogram.process.menu?after=additions">
+         <command
+               commandId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand"
+               icon="icons/file.gif"
+               label="Execute Groovy Script"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:net.openchrom.chromatogram.msd.ui.perspective.chromatogram.toolbar.process?after=additions">
+         <command
+               commandId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand"
+               icon="icons/file.gif"
+               label="Execute Groovy Script"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc_plugin.xml">
+      </toc>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.GroovyScriptEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="groovy"
+            icon="icons/file.gif"
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.groovyScriptEditor"
+            name="Groovy Script Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui"
+            name="OpenChrom Groovy-Script">
+      </category>
+      <wizard
+            category="net.openchrom.chromatogram.msd.process.supplier.groovy.ui"
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
+            icon="icons/file.gif"
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
+            name="OpenChrom Groovy-Script">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="net.openchrom.chromatogram.msd.process.ui.preferences.processPreferencePage"
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.PreferencePage"
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.preferencePage"
+            name="OpenChrom Groovy-Script Support">
+      </page>
+   </extension>
+      <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
