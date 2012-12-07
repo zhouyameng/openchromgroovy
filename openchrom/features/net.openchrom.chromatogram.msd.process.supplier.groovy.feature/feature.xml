@@ -25,26 +25,10 @@
          unpack="false"/>
 
    <plugin
-         id="net.openchrom.chromatogram.msd.process.supplier.groovy.fragment.i18n"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.fragment.i18n"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
 </feature>
