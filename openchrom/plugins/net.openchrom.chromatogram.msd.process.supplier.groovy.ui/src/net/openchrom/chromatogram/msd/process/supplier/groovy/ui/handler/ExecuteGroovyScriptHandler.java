@@ -17,43 +17,37 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
-import java.net.URL;
+
+import javax.inject.Named;
 
 import groovy.lang.GroovyShell;
 import groovy.lang.Script;
 
 import org.codehaus.groovy.control.CompilationFailedException;
-import org.eclipse.core.commands.AbstractHandler;
-import org.eclipse.core.commands.ExecutionEvent;
-import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.resources.IFile;
+import org.eclipse.e4.core.di.annotations.Execute;
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.ui.IEditorInput;
-import org.eclipse.ui.IFileEditorInput;
-import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
-import org.eclipse.ui.console.IConsoleConstants;
 import org.eclipse.ui.console.IConsoleManager;
 import org.eclipse.ui.console.MessageConsole;
 import org.eclipse.ui.console.MessageConsoleStream;
 
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.IConstants;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.PreferenceSupplier;
-import net.openchrom.chromatogram.msd.ui.perspective.perspectives.ChromatogramMSPerspective;
-import net.openchrom.chromatogram.msd.ui.perspective.support.PerspectiveChooserSupport;
 import net.openchrom.logging.core.Logger;
 
-public class ExecuteGroovyScriptHandler extends AbstractHandler {
+@SuppressWarnings("restriction")
+public class ExecuteGroovyScriptHandler {
 
 	private static final Logger logger = Logger.getLogger(ExecuteGroovyScriptHandler.class);
 
-	@Override
-	public Object execute(ExecutionEvent event) throws ExecutionException {
+	@Execute
+	public void execute(@Named(IServiceConstants.ACTIVE_PART) MPart part) {
 
 		/*
 		 * Get the default streams.
@@ -63,7 +57,7 @@ public class ExecuteGroovyScriptHandler extends AbstractHandler {
 		/*
 		 * Try to select and show the perspective and view.
 		 */
-		PerspectiveChooserSupport.focusPerspectiveAndView(ChromatogramMSPerspective.ID, IConsoleConstants.ID_CONSOLE_VIEW);
+		// PerspectiveChooserSupport.focusPerspectiveAndView(ChromatogramMSPerspective.ID, IConsoleConstants.ID_CONSOLE_VIEW);
 		/*
 		 * Execute script
 		 */
@@ -87,7 +81,6 @@ public class ExecuteGroovyScriptHandler extends AbstractHandler {
 			System.setOut(out);
 			System.setErr(err);
 		}
-		return null;
 	}
 
 	private void catchError(Exception e) {
@@ -159,19 +152,19 @@ public class ExecuteGroovyScriptHandler extends AbstractHandler {
 
 	private File getFileFromActiveEditor() throws FileNotFoundException, MalformedURLException, URISyntaxException {
 
-		IWorkbenchPage workbenchPage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-		IEditorInput editorInput = workbenchPage.getActiveEditor().getEditorInput();
-		if(editorInput instanceof IFileEditorInput) {
-			IFile iFile = ((IFileEditorInput)editorInput).getFile();
-			URL url = iFile.getRawLocationURI().toURL();
-			File file = new File(url.toURI());
-			if(file.getName().endsWith(IConstants.FILE_EXTENSION)) {
-				return file;
-			} else {
-				throw new FileNotFoundException();
-			}
-		} else {
-			throw new FileNotFoundException();
-		}
+		System.out.println("OpenChrom Groovy get file from open editor");
+		return new File("");
+		// if(editorInput instanceof IFileEditorInput) {
+		// IFile iFile = ((IFileEditorInput)editorInput).getFile();
+		// URL url = iFile.getRawLocationURI().toURL();
+		// File file = new File(url.toURI());
+		// if(file.getName().endsWith(IConstants.FILE_EXTENSION)) {
+		// return file;
+		// } else {
+		// throw new FileNotFoundException();
+		// }
+		// } else {
+		// throw new FileNotFoundException();
+		// }
 	}
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_R8sMUECKEeKMcNE1hx3pmQ">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_haW0MECKEeKMcNE1hx3pmQ" featurename="commands" parentElementId="net.openchrom.rcp.ide.application">
+    <elements xsi:type="commands:Command" xmi:id="_icRkMECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.command.executeGroovyScript" commandName="Execute Groovy Script"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_moOAMECKEeKMcNE1hx3pmQ" featurename="handlers" parentElementId="net.openchrom.rcp.ide.application">
+    <elements xsi:type="commands:Handler" xmi:id="_oXJnMECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handler.executeGroovyScript" contributionURI="bundleclass://net.openchrom.chromatogram.msd.process.supplier.groovy.ui/net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handler.ExecuteGroovyScriptHandler" command="_icRkMECKEeKMcNE1hx3pmQ"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_tW43oECKEeKMcNE1hx3pmQ" featurename="children" parentElementId="net.openchrom.rcp.extension.chromatogram.ui.menu.process">
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_u7wjsECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handledmenuitem.executeGroovyScript" label="Execute Groovy Script" iconURI="platform:/plugin/net.openchrom.chromatogram.msd.process.supplier.groovy.ui/icons/file.gif" command="_icRkMECKEeKMcNE1hx3pmQ"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_0YQooECKEeKMcNE1hx3pmQ" featurename="children" parentElementId="net.openchrom.rcp.extension.chromatogram.ui.toolbar.processors">
+    <elements xsi:type="menu:HandledToolItem" xmi:id="_2A8dsECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handledtoolitem.executeGroovyScript" label="Execute Groovy Script" iconURI="platform:/plugin/net.openchrom.chromatogram.msd.process.supplier.groovy.ui/icons/file.gif" command="_icRkMECKEeKMcNE1hx3pmQ"/>
+  </fragments>
+</fragment:ModelFragments>

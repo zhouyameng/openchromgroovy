@@ -16,9 +16,6 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.PartInitException;
-import org.eclipse.ui.PlatformUI;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -36,7 +33,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.ui.ide.IDE;
 
 /**
  * This is a sample new wizard. Its role is to create a new file
@@ -137,11 +133,7 @@ public class GroovyScriptWizard extends Wizard implements INewWizard {
 
 			public void run() {
 
-				IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-				try {
-					IDE.openEditor(page, file, true);
-				} catch(PartInitException e) {
-				}
+				System.out.println("OpenChrom Groovy open the editor");
 			}
 		});
 		monitor.worked(1);
