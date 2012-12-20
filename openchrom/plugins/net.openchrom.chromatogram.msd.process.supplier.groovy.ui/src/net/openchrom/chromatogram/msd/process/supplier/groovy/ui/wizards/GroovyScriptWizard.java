@@ -16,6 +16,10 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.ide.IDE;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -133,7 +137,11 @@ public class GroovyScriptWizard extends Wizard implements INewWizard {
 
 			public void run() {
 
-				System.out.println("OpenChrom Groovy open the editor");
+				IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+				try {
+					IDE.openEditor(page, file, true);
+				} catch(PartInitException e) {
+				}
 			}
 		});
 		monitor.worked(1);
