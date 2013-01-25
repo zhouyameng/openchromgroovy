@@ -40,6 +40,8 @@ import org.eclipse.ui.console.MessageConsoleStream;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.IConstants;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.PreferenceSupplier;
 import net.openchrom.logging.core.Logger;
+import net.openchrom.rcp.app.ui.handlers.PerspectiveSwitchHandler;
+import net.openchrom.rcp.extension.chromatogram.msd.ui.support.IPerspectiveAndViewIds;
 
 @SuppressWarnings("restriction")
 public class ExecuteGroovyScriptHandler {
@@ -57,7 +59,8 @@ public class ExecuteGroovyScriptHandler {
 		/*
 		 * Try to select and show the perspective and view.
 		 */
-		// PerspectiveChooserSupport.focusPerspectiveAndView(ChromatogramMSPerspective.ID, IConsoleConstants.ID_CONSOLE_VIEW);
+		String viewId = "org.eclipse.ui.console.ConsoleView";
+		PerspectiveSwitchHandler.focusPerspectiveAndView(IPerspectiveAndViewIds.PERSPECTIVE_MSD, viewId);
 		/*
 		 * Execute script
 		 */
