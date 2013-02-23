@@ -7,9 +7,9 @@
     <elements xsi:type="commands:Handler" xmi:id="_oXJnMECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handler.executeGroovyScript" contributionURI="bundleclass://net.openchrom.chromatogram.msd.process.supplier.groovy.ui/net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handler.ExecuteGroovyScriptHandler" command="_icRkMECKEeKMcNE1hx3pmQ"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_tW43oECKEeKMcNE1hx3pmQ" featurename="children" parentElementId="net.openchrom.rcp.extension.chromatogram.ui.menu.process">
-    <elements xsi:type="menu:HandledMenuItem" xmi:id="_u7wjsECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handledmenuitem.executeGroovyScript" label="Execute Groovy Script" iconURI="icon://file.gif" command="_icRkMECKEeKMcNE1hx3pmQ"/>
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_u7wjsECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handledmenuitem.executeGroovyScript" label="Execute Groovy Script" iconURI="platform:/plugin/net.openchrom.rcp.ui.icons/icons/16x16/file.gif" command="_icRkMECKEeKMcNE1hx3pmQ"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_0YQooECKEeKMcNE1hx3pmQ" featurename="children" parentElementId="net.openchrom.rcp.extension.chromatogram.ui.toolbar.processors">
-    <elements xsi:type="menu:HandledToolItem" xmi:id="_2A8dsECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handledtoolitem.executeGroovyScript" label="Execute Groovy Script" iconURI="icon://file.gif" command="_icRkMECKEeKMcNE1hx3pmQ"/>
+    <elements xsi:type="menu:HandledToolItem" xmi:id="_2A8dsECKEeKMcNE1hx3pmQ" elementId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handledtoolitem.executeGroovyScript" label="Execute Groovy Script" iconURI="platform:/plugin/net.openchrom.rcp.ui.icons/icons/16x16/file.gif" command="_icRkMECKEeKMcNE1hx3pmQ"/>
   </fragments>
 </fragment:ModelFragments>
