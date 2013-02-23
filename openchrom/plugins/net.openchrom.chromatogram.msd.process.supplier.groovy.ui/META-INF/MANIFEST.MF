@@ -46,5 +46,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.e4.core.di;bundle-version="1.2.0",
  net.openchrom.rcp.app.ui;bundle-version="0.8.0",
  net.openchrom.rcp.extension.chromatogram.msd.ui;bundle-version="0.8.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
