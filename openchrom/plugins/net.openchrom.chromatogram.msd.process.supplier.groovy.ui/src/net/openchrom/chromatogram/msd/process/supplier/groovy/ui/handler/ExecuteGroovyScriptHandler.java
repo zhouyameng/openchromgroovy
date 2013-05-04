@@ -43,7 +43,6 @@ import net.openchrom.logging.core.Logger;
 import net.openchrom.rcp.app.ui.handlers.PerspectiveSwitchHandler;
 import net.openchrom.rcp.extension.chromatogram.msd.ui.support.IPerspectiveAndViewIds;
 
-@SuppressWarnings("restriction")
 public class ExecuteGroovyScriptHandler {
 
 	private static final Logger logger = Logger.getLogger(ExecuteGroovyScriptHandler.class);
