@@ -1,1 +1,0 @@
-The icon is used by the wizard dialog. There is no solution to store the icon in a separate plug-in or fragment yet.
