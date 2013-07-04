@@ -41,7 +41,7 @@ import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.prefer
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.PreferenceSupplier;
 import net.openchrom.logging.core.Logger;
 import net.openchrom.rcp.app.ui.handlers.PerspectiveSwitchHandler;
-import net.openchrom.rcp.extension.chromatogram.msd.ui.support.IPerspectiveAndViewIds;
+import net.openchrom.support.events.IPerspectiveAndViewIds;
 
 public class ExecuteGroovyScriptHandler {
 
