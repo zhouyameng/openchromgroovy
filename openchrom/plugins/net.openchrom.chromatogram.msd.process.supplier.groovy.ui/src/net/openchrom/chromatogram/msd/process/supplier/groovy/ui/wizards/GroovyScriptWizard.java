@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2012 Philip (eselmeister) Wenig.
+ * Copyright (c) 2012, 2013 Philip (eselmeister) Wenig.
  * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -19,6 +19,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.ide.IDE;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -36,7 +37,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.ui.ide.IDE;
 
 /**
  * This is a sample new wizard. Its role is to create a new file

@@ -2,39 +2,11 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.ui.handlers">
-      <handler
-            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.handler.ExecuteGroovyScriptHandler"
-            commandId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand">
-      </handler>
-   </extension>
-   <extension
-         point="org.eclipse.ui.commands">
-      <command
-            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand"
-            name="Execute Groovy Script">
-      </command>
-   </extension>
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            locationURI="menu:net.openchrom.chromatogram.msd.ui.perspective.chromatogram.process.menu?after=additions">
-         <command
-               commandId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand"
-               icon="icons/file.gif"
-               label="Execute Groovy Script"
-               style="push">
-         </command>
-      </menuContribution>
-      <menuContribution
-            locationURI="toolbar:net.openchrom.chromatogram.msd.ui.perspective.chromatogram.toolbar.process?after=additions">
-         <command
-               commandId="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.executeGroovyScriptCommand"
-               icon="icons/file.gif"
-               label="Execute Groovy Script"
-               style="push">
-         </command>
-      </menuContribution>
+         id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.modelContribution"
+         point="org.eclipse.e4.workbench.model">
+      <fragment
+            uri="fragment.e4xmi">
+      </fragment>
    </extension>
    <extension
          point="org.eclipse.help.toc">
@@ -48,7 +20,7 @@
             class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.GroovyScriptEditor"
             contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
             extensions="groovy"
-            icon="icons/file.gif"
+            icon="platform:/plugin/net.openchrom.rcp.ui.icons/icons/16x16/file.gif"
             id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.groovyScriptEditor"
             name="Groovy Script Editor">
       </editor>
@@ -62,7 +34,7 @@
       <wizard
             category="net.openchrom.chromatogram.msd.process.supplier.groovy.ui"
             class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
-            icon="icons/file.gif"
+            icon="platform:/plugin/net.openchrom.rcp.ui.icons/icons/16x16/file.gif"
             id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
             name="OpenChrom Groovy-Script">
       </wizard>

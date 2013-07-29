@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<!--
+  Copyright (c) 2012, 2013 Philip (eselmeister) Wenig.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Distribution License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/org/documents/edl-v10.php
+ 
+  Contributors:
+     Philip (eselmeister) Wenig - created the pom to build the plug-ins
+-->
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.openchrom</groupId>
-  <artifactId>parent</artifactId>
+  <artifactId>master</artifactId>
   <version>BUILD-VERSION</version>
   <packaging>pom</packaging>
   <!--
@@ -15,108 +27,90 @@
 	PROPERTIES
   --> 
   <properties>
-    <tycho-version>0.13.0</tycho-version>
-    <tycho-groupid>org.eclipse.tycho</tycho-groupid>
-    <sonatype-groupid>org.sonatype.tycho</sonatype-groupid>
-    <maven-groupid>org.apache.maven.plugins</maven-groupid>
+    <!-- VERSIONS -->
+    <tycho.version>0.18.0</tycho.version>
+    <tycho-extras.version>0.18.0</tycho-extras.version>
+    <pmd.version>2.7.1</pmd.version>
+    <checkstyle.version>2.9.1</checkstyle.version>
+    <!-- IDS -->
+    <tycho.groupid>org.eclipse.tycho</tycho.groupid>
+    <sonatype.groupid>org.sonatype.tycho</sonatype.groupid>
+    <maven.groupid>org.apache.maven.plugins</maven.groupid>
+    <!-- REPOSITORY URLS -->
+    <tycho-repo.url>https://oss.sonatype.org/content/groups/public</tycho-repo.url>
+    <kepler-repo.url>http://download.eclipse.org/releases/kepler</kepler-repo.url>
+    <kepler-updates-repo.url>http://download.eclipse.org/eclipse/updates/4.3</kepler-updates-repo.url>
+    <orbit-repo.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20130517111416/repository</orbit-repo.url>
+    <e4-tools.url>http://download.eclipse.org/e4/downloads/drops/R-0.14-201306242200/repository</e4-tools.url>
+    <juno-repo.url>http://download.eclipse.org/releases/juno</juno-repo.url>
+    <jetty-repo.url>http://download.eclipse.org/jetty/updates/jetty-bundles-8.x</jetty-repo.url>
+    <ecf-repo.url>http://download.eclipse.org/rt/ecf/3.6.1/site.p2</ecf-repo.url>
+    <egit-repo.url>http://download.eclipse.org/egit/updates</egit-repo.url>
+    <swtbot-repo.url>http://download.eclipse.org/technology/swtbot/releases/latest</swtbot-repo.url>
+    <!-- ENCODING -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  <!--
-	DESCRIPTION
-  --> 
-  <name>OpenChrom Groovy-Script Plug-in</name>
-  <description>
-	The OpenChrom Groovy-Script plug-in offers a solution to edit and analyze chromatograms using Groovy scripts. It extends the functionality of the OpenChrom Rich Client Platform (RCP).
-  </description>
-  <url>http://sourceforge.net/projects/openchromgroovy</url>
-  <!--
-	LICENSES
-  -->
-  <licenses>
-    <license>
-      <name>EPL v1.0</name>
-      <url>http://www.eclipse.org/legal/epl-v10.html</url>
-    </license> 
-  </licenses>
-  <!--
-	DEVELOPERS
-  -->
-  <developers>
-    <developer>
-      <id>eselmeister</id>
-      <name>Philip Wenig</name>
-      <email>philip.wenig [at] gmx.net</email>
-      <timezone>+1</timezone>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-  </developers>
-  <!--
-	MODULES
-  -->
-  <modules>
-    <module>./plugins/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy</module>
-    <module>./plugins/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy.fragment.i18n</module>
-    <!--<module>./plugins/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy.fragment.test</module>-->
-    <module>./plugins/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy.ui</module>
-    <module>./plugins/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy.ui.fragment.i18n</module>
-    <!--<module>./plugins/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy.ui.fragment.test</module>-->
-    <module>./features/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy.feature</module>
-    <!--<module>./updateSites/net.openchrom.chromatogram.msd.process.supplier.openchromgroovy.updateSite</module>-->
-  </modules>
-  <!--
-	DEPENDENCIES SHOULD BE EDITED IN EACH MODULE.
-  -->
   <!--
 	P2 REPOSITORIES
   -->
   <repositories>
-   <!-- Use to avoid problems determining the SWT bundle version. -->
-   <repository>
-     <id>swtbothelios</id>
-     <layout>p2</layout>
-     <url>http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site</url>
-   </repository>
-   <repository>
-     <id>swtbotgalileo</id>
-     <layout>p2</layout>
-     <url>http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site</url>
-   </repository>
-   <repository>
-     <id>indigo</id>
-     <layout>p2</layout>
-     <url>http://download.eclipse.org/releases/indigo</url>
-   </repository>
-   <repository>
-     <id>helios</id>
-     <layout>p2</layout>
-     <url>http://download.eclipse.org/releases/helios</url>
-   </repository>
-   <!--
-   <repository>
-     <id>galileo</id>
-     <layout>p2</layout>
-     <url>http://download.eclipse.org/releases/galileo</url>
-   </repository>
-   <repository>
-     <id>ganymede</id>
-     <layout>p2</layout>
-     <url>http://download.eclipse.org/releases/ganymede</url>
-   </repository>
-   -->
+    <repository>
+      <id>kepler</id>
+      <url>${kepler-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>kepler-updates</id>
+      <url>${kepler-updates-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>e4-tools</id>
+      <url>${e4-tools.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>orbit</id>
+      <url>${orbit-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>juno</id>
+      <url>${juno-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>ecf</id>
+      <url>${ecf-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>jetty</id>
+      <url>${jetty-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>egit</id>
+      <url>${egit-repo.url}</url>
+      <layout>p2</layout>
+    </repository> 
+    <repository>
+      <id>swtbot</id>
+      <url>${swtbot-repo.url}</url>
+      <layout>p2</layout>
+    </repository> 
   </repositories>
   <!--
 	PLUGIN REPOSITORIES
   -->
-  <!--
-	SOURCE CODE MANAGEMENT
-  -->
-  <scm>
-    <connection>scm:git:git://openchromgroovy.git.sourceforge.net/gitroot/openchromgroovy/openchromgroovy</connection>
-    <developerConnection>scm:git:ssh://openchromgroovy.git.sourceforge.net/gitroot/openchromgroovy/openchromgroovy</developerConnection>
-    <url>http://openchromgroovy.git.sourceforge.net/git/gitweb-index.cgi</url>
-  </scm>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>tycho</id>
+      <url>${tycho-repo.url}</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </pluginRepository>
+  </pluginRepositories>
   <!--
 	BUILD
   -->
@@ -125,56 +119,100 @@
 	PLUGINS
     -->  
     <plugins>
-      <!--
-	Use the maven source code management plugin.
-      -->
       <plugin>
-	<groupId>${maven-groupid}</groupId>
-	<artifactId>maven-scm-plugin</artifactId>
-	<configuration>
-	  <checkoutDirectory>.</checkoutDirectory>
-	</configuration>
-      </plugin>
-      <!-- 
-	Tycho Maven Plugin
-      -->
-      <plugin>
-        <groupId>${tycho-groupid}</groupId>
+        <groupId>${tycho.groupid}</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
-        <version>${tycho-version}</version>
+        <version>${tycho.version}</version>
         <extensions>true</extensions>
-      </plugin>	
-      <!--
-	Source and target to Java version 1.6, otherwise "method must implement @override" failures will occur.
-      -->
-      <plugin>
-        <groupId>${sonatype-groupid}</groupId>
-        <artifactId>maven-osgi-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
       </plugin>
-      <!--
-	Use the provisioning system p2 from Eclipse.
-      -->
       <plugin>
-        <groupId>${tycho-groupid}</groupId>
+        <groupId>${tycho.groupid}</groupId>
         <artifactId>target-platform-configuration</artifactId>
-        <version>${tycho-version}</version>
+        <version>${tycho.version}</version>
         <configuration>
-          <resolver>p2</resolver>
+          <environments>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86</arch>
+            </environment>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>ppc</arch>
+            </environment>
+            <environment>
+              <os>solaris</os>
+              <ws>gtk</ws>
+              <arch>x86</arch>
+            </environment>
+          </environments>
         </configuration>
       </plugin>
-      <!--
-	Settings of the JUnit-Tests.
-      -->
       <plugin>
-        <groupId>${sonatype-groupid}</groupId>
-        <artifactId>maven-osgi-test-plugin</artifactId>
+        <groupId>${tycho.groupid}</groupId>
+        <artifactId>tycho-source-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <executions>
+          <execution>
+            <id>plugin-source</id>
+            <goals>
+              <goal>plugin-source</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-compiler-plugin</artifactId>
+        <version>${tycho.version}</version>
+          <configuration>
+            <compilerArguments>
+              <encoding>${project.build.sourceEncoding}</encoding>
+            </compilerArguments>
+          </configuration>
+      </plugin>
+      <plugin>
+        <groupId>${tycho.groupid}</groupId>
+        <artifactId>tycho-surefire-plugin</artifactId>
+        <version>${tycho.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>${maven.groupid}</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${pmd.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>${maven.groupid}</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${checkstyle.version}</version>
         <configuration>
-          <useUIHarness>false</useUIHarness>
-          <argLine>-Xmx500m -XX:MaxPermSize=256m</argLine>
+          <enableRulesSummary>false</enableRulesSummary>
         </configuration>
       </plugin>
     </plugins>
