@@ -55,15 +55,6 @@
     <module>../../plugins/net.openchrom.chromatogram.msd.process.supplier.groovy.ui</module>
     <module>../../features/net.openchrom.chromatogram.msd.process.supplier.groovy.feature</module>
     <!--<module>../../plugins/net.openchrom.chromatogram.msd.process.supplier.groovy.fragment.test</module>-->
-    <!--<module>../../plugins/net.openchrom.chromatogram.msd.process.supplier.groovy.ui.fragment.test</module>-->
     <module>../../sites/net.openchrom.chromatogram.msd.process.supplier.groovy.updateSite</module>
   </modules>
-  <!--
-	SOURCE CODE MANAGEMENT
-  -->
-  <scm>
-    <connection>scm:git:git://openchromgroovy.git.sourceforge.net/gitroot/openchromgroovy/openchromgroovy</connection>
-    <developerConnection>scm:git:ssh://openchromgroovy.git.sourceforge.net/gitroot/openchromgroovy/openchromgroovy</developerConnection>
-    <url>http://openchromgroovy.git.sourceforge.net/git/gitweb-index.cgi</url>
-  </scm>
 </project>
