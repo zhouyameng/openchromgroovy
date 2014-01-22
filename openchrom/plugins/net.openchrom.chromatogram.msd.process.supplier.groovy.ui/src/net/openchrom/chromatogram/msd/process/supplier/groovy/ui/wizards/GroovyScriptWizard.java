@@ -12,12 +12,16 @@
 package net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+
+import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.PathResolver;
 import net.openchrom.logging.core.Logger;
 import net.openchrom.support.ui.wizards.AbstractFileWizard;
 
@@ -39,7 +43,20 @@ public class GroovyScriptWizard extends AbstractFileWizard {
 		 * Initialize a simple batch process job.
 		 */
 		try {
-			InputStream stream = new ByteArrayInputStream("Groovy Script".getBytes());
+			/*
+			 * Try to get the demo script.
+			 */
+			String scriptPathname = PathResolver.getAbsolutePath("scripts/parse-chromatogram.groovy");
+			File scriptFile = new File(scriptPathname);
+			InputStream stream;
+			if(scriptFile.exists()) {
+				stream = new FileInputStream(scriptFile);
+			} else {
+				stream = new ByteArrayInputStream("Groovy Script".getBytes());
+			}
+			/*
+			 * Write the stream to the selected file.
+			 */
 			if(file.exists()) {
 				file.setContents(stream, true, true, monitor);
 			} else {
