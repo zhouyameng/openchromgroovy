@@ -41,7 +41,7 @@ public class GroovyScriptWizard extends AbstractFileWizard {
 		try {
 			/*
 			 * Try to get the demo script.
-			 */			
+			 */
 			BufferedInputStream bufferedInputStream = new BufferedInputStream(GroovyScriptWizard.class.getResourceAsStream("parse-chromatogram.groovy"));
 			if(file.exists()) {
 				file.setContents(bufferedInputStream, true, true, monitor);
