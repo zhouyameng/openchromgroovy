@@ -29,14 +29,14 @@
          point="org.eclipse.ui.newWizards">
       <category
             id="net.chemclipse.chromatogram.msd.process.supplier.groovy.ui"
-            name="ChemClipse Groovy-Script">
+            name="OpenChrom Groovy-Script">
       </category>
       <wizard
             category="net.chemclipse.chromatogram.msd.process.supplier.groovy.ui"
             class="net.chemclipse.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
             icon="platform:/plugin/net.chemclipse.rcp.ui.icons/icons/16x16/file.gif"
             id="net.chemclipse.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
-            name="ChemClipse Groovy-Script">
+            name="OpenChrom Groovy-Script">
       </wizard>
    </extension>
    <extension
@@ -45,7 +45,7 @@
             category="net.chemclipse.chromatogram.msd.process.ui.preferences.processPreferencePage"
             class="net.chemclipse.chromatogram.msd.process.supplier.groovy.ui.preferences.PreferencePage"
             id="net.chemclipse.chromatogram.msd.process.supplier.groovy.ui.preferences.preferencePage"
-            name="ChemClipse Groovy-Script Support">
+            name="OpenChrom Groovy-Script Support">
       </page>
    </extension>
       <extension
