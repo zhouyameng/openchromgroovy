@@ -18,9 +18,9 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 
 import net.chemclipse.chromatogram.model.core.IScan;
-import net.chemclipse.chromatogram.msd.converter.chromatogram.ChromatogramConverterMSD;
-import net.chemclipse.chromatogram.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
-import net.chemclipse.chromatogram.msd.model.core.IChromatogramMSD;
+import net.chemclipse.msd.converter.chromatogram.ChromatogramConverterMSD;
+import net.chemclipse.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
+import net.chemclipse.msd.model.core.IChromatogramMSD;
 import net.chemclipse.processing.core.IProcessingMessage;
 import net.chemclipse.processing.core.exceptions.TypeCastException;
 
