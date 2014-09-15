@@ -4,7 +4,7 @@ Bundle-Name: Groovy
 Bundle-SymbolicName: net.chemclipse.chromatogram.msd.process.supplier.groovy
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: net.chemclipse.chromatogram.msd.process.supplier.groovy.Activator
-Bundle-Vendor: OpenChrom
+Bundle-Vendor: ChemClipse
 Require-Bundle: org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
