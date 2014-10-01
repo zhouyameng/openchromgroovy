@@ -3,9 +3,9 @@ Eclipse-RegisterBuddy: net.openchrom.thirdpartylibraries.groovy
 Bundle-ManifestVersion: 2
 Bundle-Name: Ui
 Bundle-SymbolicName: net.openchrom.chromatogram.msd.process.supplier.groovy.ui;singleton:=true
-Bundle-Version: 0.7.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: net.openchrom.chromatogram.msd.process.supplier.groovy.ui.Activator
-Bundle-Vendor: ChemClipse
+Bundle-Vendor: OpenChrom
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  net.openchrom.chromatogram.msd.process.supplier.groovy;bundle-version="0.7.0",

@@ -2,8 +2,8 @@
 <feature
       id="net.openchrom.chromatogram.msd.process.supplier.groovy.feature"
       label="Feature"
-      version="0.7.0.qualifier"
-      provider-name="ChemClipse">
+      version="1.0.0.qualifier"
+      provider-name="OpenChrom">
 
    <description url="http://www.chemclipse.net">
       This is a groovy script supplier.
@@ -20,6 +20,7 @@ are made available under the terms of the Eclipse Public License
 v1.0 which accompanies this distribution, and is available at
 http://www.eclipse.org/legal/epl-v10.html
    </license>
+
    <plugin
          id="net.openchrom.chromatogram.msd.process.supplier.groovy"
          download-size="0"
