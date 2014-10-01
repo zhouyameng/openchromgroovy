@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Eclipse-RegisterBuddy: net.chemclipse.thirdpartylibraries.groovy
+Eclipse-RegisterBuddy: net.openchrom.thirdpartylibraries.groovy
 Bundle-ManifestVersion: 2
 Bundle-Name: Ui
 Bundle-SymbolicName: net.chemclipse.chromatogram.msd.process.supplier.groovy.ui;singleton:=true
@@ -9,7 +9,7 @@ Bundle-Vendor: ChemClipse
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  net.chemclipse.chromatogram.msd.process.supplier.groovy;bundle-version="0.7.0",
- net.chemclipse.thirdpartylibraries.groovy;bundle-version="2.0.2",
+ net.openchrom.thirdpartylibraries.groovy;bundle-version="2.0.2",
  net.chemclipse.msd.model;bundle-version="0.7.0",
  net.chemclipse.logging;bundle-version="0.7.0",
  net.chemclipse.processing;bundle-version="0.7.0",
