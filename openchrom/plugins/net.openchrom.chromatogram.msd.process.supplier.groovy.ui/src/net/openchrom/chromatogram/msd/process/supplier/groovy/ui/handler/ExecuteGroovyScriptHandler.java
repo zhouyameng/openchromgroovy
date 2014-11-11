@@ -42,7 +42,7 @@ import net.chemclipse.logging.core.Logger;
 import net.chemclipse.rcp.app.ui.handlers.PerspectiveSwitchHandler;
 import net.chemclipse.support.events.IPerspectiveAndViewIds;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.IConstants;
-import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.PreferenceSupplier;
+import net.openchrom.chromatogram.msd.process.supplier.groovy.preferences.PreferenceSupplier;
 
 public class ExecuteGroovyScriptHandler {
 

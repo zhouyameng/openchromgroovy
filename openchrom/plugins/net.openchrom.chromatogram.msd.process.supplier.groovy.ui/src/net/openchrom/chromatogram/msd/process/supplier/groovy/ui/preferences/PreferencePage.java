@@ -17,7 +17,7 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.IWorkbench;
 
 import net.chemclipse.support.ui.preferences.fieldeditors.SpacerFieldEditor;
-import net.openchrom.chromatogram.msd.process.supplier.groovy.preferences.ProcessPreferences;
+import net.openchrom.chromatogram.msd.process.supplier.groovy.preferences.PreferenceSupplier;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.Activator;
 
 public class PreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
@@ -37,7 +37,7 @@ public class PreferencePage extends FieldEditorPreferencePage implements IWorkbe
 	public void createFieldEditors() {
 
 		addField(new SpacerFieldEditor(getFieldEditorParent()));
-		addField(new BooleanFieldEditor(ProcessPreferences.P_USE_FILE_DIALOG, "Use a file selection dialog instead of the active editor.", getFieldEditorParent()));
+		addField(new BooleanFieldEditor(PreferenceSupplier.P_USE_FILE_DIALOG, "Use a file selection dialog instead of the active editor.", getFieldEditorParent()));
 	}
 
 	/*

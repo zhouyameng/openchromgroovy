@@ -48,11 +48,5 @@
             name="OpenChrom Groovy-Script Support">
       </page>
    </extension>
-      <extension
-         point="org.eclipse.core.runtime.preferences">
-      <initializer
-            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.PreferenceInitializer">
-      </initializer>
-   </extension>
 
 </plugin>
