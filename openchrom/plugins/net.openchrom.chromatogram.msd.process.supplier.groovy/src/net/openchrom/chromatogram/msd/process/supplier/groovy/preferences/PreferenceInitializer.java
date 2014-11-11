@@ -8,7 +8,7 @@
  * 
  * Contributors:
  * Dr. Philip Wenig - initial API and implementation
-*******************************************************************************/
+ *******************************************************************************/
 package net.openchrom.chromatogram.msd.process.supplier.groovy.preferences;
 
 import net.chemclipse.support.preferences.AbstractExtendedPreferenceInitializer;

@@ -61,7 +61,7 @@ public class PreferenceSupplier implements IPreferenceSupplier {
 
 		return getScopeContext().getNode(getPreferenceNode());
 	}
-	
+
 	/**
 	 * Returns whether to use the file dialog or not.
 	 * 
