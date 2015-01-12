@@ -5,11 +5,11 @@
       version="1.0.0.qualifier"
       provider-name="OpenChrom">
 
-   <description url="http://www.chemclipse.net">
+   <description url="http://www.openchrom.net">
       This is a groovy script supplier.
    </description>
 
-   <copyright url="http://www.chemclipse.net">
+   <copyright url="http://www.openchrom.net">
       Copyright (c) 2012, 2015 Dr. Philip Wenig.
    </copyright>
 
