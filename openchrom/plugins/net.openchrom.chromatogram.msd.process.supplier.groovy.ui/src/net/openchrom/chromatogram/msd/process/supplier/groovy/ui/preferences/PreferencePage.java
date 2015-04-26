@@ -16,7 +16,7 @@ import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.IWorkbench;
 
-import net.chemclipse.support.ui.preferences.fieldeditors.SpacerFieldEditor;
+import org.eclipse.chemclipse.support.ui.preferences.fieldeditors.SpacerFieldEditor;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.preferences.PreferenceSupplier;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.Activator;
 

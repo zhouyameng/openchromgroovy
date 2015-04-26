@@ -18,8 +18,8 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 
-import net.chemclipse.logging.core.Logger;
-import net.chemclipse.support.ui.wizards.AbstractFileWizard;
+import org.eclipse.chemclipse.logging.core.Logger;
+import org.eclipse.chemclipse.support.ui.wizards.AbstractFileWizard;
 
 public class GroovyScriptWizard extends AbstractFileWizard {
 

@@ -38,9 +38,9 @@ import org.eclipse.ui.console.IConsoleManager;
 import org.eclipse.ui.console.MessageConsole;
 import org.eclipse.ui.console.MessageConsoleStream;
 
-import net.chemclipse.logging.core.Logger;
-import net.chemclipse.rcp.app.ui.handlers.PerspectiveSwitchHandler;
-import net.chemclipse.support.events.IPerspectiveAndViewIds;
+import org.eclipse.chemclipse.logging.core.Logger;
+import org.eclipse.chemclipse.rcp.app.ui.handlers.PerspectiveSwitchHandler;
+import org.eclipse.chemclipse.support.events.IPerspectiveAndViewIds;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.internal.preferences.IConstants;
 import net.openchrom.chromatogram.msd.process.supplier.groovy.preferences.PreferenceSupplier;
 

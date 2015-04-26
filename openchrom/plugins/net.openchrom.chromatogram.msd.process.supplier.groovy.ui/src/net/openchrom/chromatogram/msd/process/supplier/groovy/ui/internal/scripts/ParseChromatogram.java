@@ -17,12 +17,12 @@ import java.util.List;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 
-import net.chemclipse.model.core.IScan;
-import net.chemclipse.msd.converter.chromatogram.ChromatogramConverterMSD;
-import net.chemclipse.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
-import net.chemclipse.msd.model.core.IChromatogramMSD;
-import net.chemclipse.processing.core.IProcessingMessage;
-import net.chemclipse.processing.core.exceptions.TypeCastException;
+import org.eclipse.chemclipse.model.core.IScan;
+import org.eclipse.chemclipse.msd.converter.chromatogram.ChromatogramConverterMSD;
+import org.eclipse.chemclipse.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
+import org.eclipse.chemclipse.msd.model.core.IChromatogramMSD;
+import org.eclipse.chemclipse.processing.core.IProcessingMessage;
+import org.eclipse.chemclipse.processing.core.exceptions.TypeCastException;
 
 public class ParseChromatogram {
 

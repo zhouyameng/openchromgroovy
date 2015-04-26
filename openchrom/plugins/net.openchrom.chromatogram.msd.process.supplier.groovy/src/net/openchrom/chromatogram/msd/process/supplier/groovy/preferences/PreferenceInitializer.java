@@ -11,7 +11,7 @@
  *******************************************************************************/
 package net.openchrom.chromatogram.msd.process.supplier.groovy.preferences;
 
-import net.chemclipse.support.preferences.AbstractExtendedPreferenceInitializer;
+import org.eclipse.chemclipse.support.preferences.AbstractExtendedPreferenceInitializer;
 
 public class PreferenceInitializer extends AbstractExtendedPreferenceInitializer {
 

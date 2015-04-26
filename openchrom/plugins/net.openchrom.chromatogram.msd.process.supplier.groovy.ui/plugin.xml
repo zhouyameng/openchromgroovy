@@ -20,7 +20,7 @@
             class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.GroovyScriptEditor"
             contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
             extensions="groovy"
-            icon="platform:/plugin/net.chemclipse.rcp.ui.icons/icons/16x16/file.gif"
+            icon="platform:/plugin/org.eclipse.chemclipse.rcp.ui.icons/icons/16x16/file.gif"
             id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.groovyScriptEditor"
             name="Groovy Script Editor">
       </editor>
@@ -34,7 +34,7 @@
       <wizard
             category="net.openchrom.chromatogram.msd.process.supplier.groovy.ui"
             class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
-            icon="platform:/plugin/net.chemclipse.rcp.ui.icons/icons/16x16/file.gif"
+            icon="platform:/plugin/org.eclipse.chemclipse.rcp.ui.icons/icons/16x16/file.gif"
             id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
             name="OpenChrom Groovy-Script">
       </wizard>
@@ -42,7 +42,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="net.chemclipse.chromatogram.msd.process.ui.preferences.processPreferencePage"
+            category="org.eclipse.chemclipse.chromatogram.msd.process.ui.preferences.processPreferencePage"
             class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.PreferencePage"
             id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.preferencePage"
             name="OpenChrom Groovy-Script Support">
