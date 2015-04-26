@@ -13,12 +13,12 @@ import java.io.File;
 import java.util.List;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import net.chemclipse.chromatogram.model.core.IScan;
-import net.chemclipse.chromatogram.msd.converter.chromatogram.ChromatogramConverterMSD;
-import net.chemclipse.chromatogram.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
-import net.chemclipse.chromatogram.msd.model.core.IChromatogramMSD;
-import net.chemclipse.processing.core.IProcessingMessage;
-import net.chemclipse.processing.core.exceptions.TypeCastException;
+import org.eclipse.chemclipse.chromatogram.model.core.IScan;
+import org.eclipse.chemclipse.chromatogram.msd.converter.chromatogram.ChromatogramConverterMSD;
+import org.eclipse.chemclipse.chromatogram.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
+import org.eclipse.chemclipse.chromatogram.msd.model.core.IChromatogramMSD;
+import org.eclipse.chemclipse.processing.core.IProcessingMessage;
+import org.eclipse.chemclipse.processing.core.exceptions.TypeCastException;
 
 File file = new File("Chromatogram1.CDF")
 IProgressMonitor monitor = new NullProgressMonitor()
