@@ -47,5 +47,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.chemclipse.rcp.app.ui;bundle-version="0.7.0",
  org.eclipse.chemclipse.ux.extension.msd.ui;bundle-version="0.7.0",
  org.eclipse.chemclipse.model;bundle-version="0.7.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
