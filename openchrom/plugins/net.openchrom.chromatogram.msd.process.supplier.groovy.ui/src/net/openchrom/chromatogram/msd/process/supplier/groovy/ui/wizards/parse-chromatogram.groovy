@@ -13,10 +13,10 @@ import java.io.File;
 import java.util.List;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.chemclipse.chromatogram.model.core.IScan;
-import org.eclipse.chemclipse.chromatogram.msd.converter.chromatogram.ChromatogramConverterMSD;
-import org.eclipse.chemclipse.chromatogram.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
-import org.eclipse.chemclipse.chromatogram.msd.model.core.IChromatogramMSD;
+import org.eclipse.chemclipse.model.core.IScan;
+import org.eclipse.chemclipse.msd.converter.chromatogram.ChromatogramConverterMSD;
+import org.eclipse.chemclipse.msd.converter.processing.chromatogram.IChromatogramMSDImportConverterProcessingInfo;
+import org.eclipse.chemclipse.msd.model.core.IChromatogramMSD;
 import org.eclipse.chemclipse.processing.core.IProcessingMessage;
 import org.eclipse.chemclipse.processing.core.exceptions.TypeCastException;
 
