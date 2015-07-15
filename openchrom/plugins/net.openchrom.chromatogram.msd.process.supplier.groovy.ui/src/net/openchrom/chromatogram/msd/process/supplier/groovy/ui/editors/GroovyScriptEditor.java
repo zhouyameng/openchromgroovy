@@ -14,4 +14,9 @@ package net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors;
 import org.eclipse.ui.texteditor.AbstractDecoratedTextEditor;
 
 public class GroovyScriptEditor extends AbstractDecoratedTextEditor {
+
+	public GroovyScriptEditor() {
+
+		super();
+	}
 }
