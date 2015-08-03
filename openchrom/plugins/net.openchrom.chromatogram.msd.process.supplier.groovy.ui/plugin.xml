@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.modelContribution"
+         point="org.eclipse.e4.workbench.model">
+      <fragment
+            uri="fragment.e4xmi">
+      </fragment>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc_plugin.xml">
+      </toc>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.GroovyScriptEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="groovy"
+            icon="platform:/plugin/org.eclipse.chemclipse.rcp.ui.icons/icons/16x16/file.gif"
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.editors.groovyScriptEditor"
+            name="Groovy Script Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui"
+            name="OpenChrom Groovy-Script">
+      </category>
+      <wizard
+            category="net.openchrom.chromatogram.msd.process.supplier.groovy.ui"
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
+            icon="platform:/plugin/org.eclipse.chemclipse.rcp.ui.icons/icons/16x16/file.gif"
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards.GroovyScriptWizard"
+            name="OpenChrom Groovy-Script">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.chemclipse.chromatogram.msd.process.ui.preferences.processPreferencePage"
+            class="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.PreferencePage"
+            id="net.openchrom.chromatogram.msd.process.supplier.groovy.ui.preferences.preferencePage"
+            name="OpenChrom Groovy-Script Support">
+      </page>
+   </extension>
+
+</plugin>
