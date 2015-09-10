@@ -12,8 +12,8 @@
 package net.openchrom.chromatogram.msd.process.supplier.groovy.ui;
 
 import org.osgi.framework.BundleContext;
-
 import org.eclipse.chemclipse.support.ui.activator.AbstractActivatorUI;
+
 import net.openchrom.chromatogram.msd.process.supplier.groovy.preferences.PreferenceSupplier;
 
 /**
