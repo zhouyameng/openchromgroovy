@@ -14,12 +14,11 @@ package net.openchrom.chromatogram.msd.process.supplier.groovy.ui.wizards;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 
+import org.eclipse.chemclipse.logging.core.Logger;
+import org.eclipse.chemclipse.support.ui.wizards.AbstractFileWizard;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
-
-import org.eclipse.chemclipse.logging.core.Logger;
-import org.eclipse.chemclipse.support.ui.wizards.AbstractFileWizard;
 
 public class GroovyScriptWizard extends AbstractFileWizard {
 
