@@ -23,7 +23,6 @@ import net.openchrom.chromatogram.msd.process.supplier.groovy.ui.Activator;
 public class PreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
 
 	public PreferencePage() {
-
 		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
 		setDescription("Script Support.");

@@ -16,7 +16,6 @@ import org.eclipse.ui.texteditor.AbstractDecoratedTextEditor;
 public class GroovyScriptEditor extends AbstractDecoratedTextEditor {
 
 	public GroovyScriptEditor() {
-
 		super();
 	}
 }

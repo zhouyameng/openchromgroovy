@@ -27,7 +27,6 @@ import org.eclipse.chemclipse.processing.core.exceptions.TypeCastException;
 public class ParseChromatogram {
 
 	public ParseChromatogram() {
-
 		File file = new File("Chromatogram1.CDF");
 		IProgressMonitor monitor = new NullProgressMonitor();
 		IChromatogramMSDImportConverterProcessingInfo processingInfo = null;

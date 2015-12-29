@@ -25,7 +25,6 @@ public class GroovyScriptWizard extends AbstractFileWizard {
 	private static final Logger logger = Logger.getLogger(GroovyScriptWizard.class);
 
 	public GroovyScriptWizard() {
-
 		super("GroovyScript", ".groovy");
 	}
 
