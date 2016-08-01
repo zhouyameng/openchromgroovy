@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2015 Dr. Philip Wenig.
+ * Copyright (c) 2014, 2016 Dr. Philip Wenig.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -16,7 +16,6 @@ import org.eclipse.chemclipse.support.preferences.AbstractExtendedPreferenceInit
 public class PreferenceInitializer extends AbstractExtendedPreferenceInitializer {
 
 	public PreferenceInitializer() {
-
 		super(PreferenceSupplier.INSTANCE());
 	}
 }

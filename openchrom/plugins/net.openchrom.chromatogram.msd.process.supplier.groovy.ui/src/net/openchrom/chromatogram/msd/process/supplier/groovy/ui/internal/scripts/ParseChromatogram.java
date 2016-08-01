@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2015 Dr. Philip Wenig.
+ * Copyright (c) 2014, 2016 Dr. Philip Wenig.
  * 
  * All rights reserved.
  * This program and the accompanying materials are made available under the
@@ -27,7 +27,6 @@ import org.eclipse.chemclipse.processing.core.exceptions.TypeCastException;
 public class ParseChromatogram {
 
 	public ParseChromatogram() {
-
 		File file = new File("Chromatogram1.CDF");
 		IProgressMonitor monitor = new NullProgressMonitor();
 		IChromatogramMSDImportConverterProcessingInfo processingInfo = null;
